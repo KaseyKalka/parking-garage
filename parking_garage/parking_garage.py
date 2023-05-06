@@ -5,7 +5,7 @@ class Parking_Garage():
         self.parkingSpaces = parkingSpaces # list
         self.currentTicket = currentTicket # dictionary
 
-    def this_ticket():
+    def take_ticket():
         pass
     # Decrease the amount of tickets available by 1
     # Decrease the amount of parking spots available by 1
