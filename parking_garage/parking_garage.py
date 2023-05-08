@@ -1,12 +1,17 @@
 class Parking_Garage(): 
 
     def __init__(self, tickets, parkingSpaces, currentTicket):
-        self.tickets = [] # list
-        self.parkingSpaces = [] # list
+        self.tickets = tickets # list
+        self.parkingSpaces = parkingSpaces # list
         self.currentTicket = {'Paid': False} # dictionary
 
     def take_ticket(self):
-        num_tickets = list(range(1,100))
+        num_tickets = list(range(1,21))
+        self.tickets = num_tickets
+        num_tickets = num_tickets[:-1]
+        self.tickets = num_tickets
+        print(f'There are {self.tickets[-1]} tickets left.')
+
 
     # Decrease the amount of tickets available by 1
     # Decrease the amount of parking spots available by 1
@@ -29,13 +34,11 @@ class Parking_Garage():
                 
                 
     def leave_garage(self):
-        pass
-
     # If ticket has been paid, display 'Thank you, have a nice day'
         if self.currentTicket['Paid']==True:
             print('Thank you, have a nice day')
         else:
-            payment = float(input("Please pay $10.00 for your parking ticket: "))
+            self.pay_for_parking()
     # If ticket hasn't been paid, display an input prompt for payment
     # Once paid display, 'Thank you, have a nice day'
     # Update parkingSpaces list to increase by 1
@@ -47,4 +50,4 @@ class Parking_Garage():
 num_tickets = []
 num_spots = []
 var = Parking_Garage(num_tickets, num_spots, False)
-var.pay_for_parking()
+var.take_ticket()
