@@ -7,7 +7,7 @@ class Parking_Garage():
 
     def take_ticket(self):
         num_tickets = list(range(1,100))
-        
+
     # Decrease the amount of tickets available by 1
     # Decrease the amount of parking spots available by 1
         
@@ -28,8 +28,6 @@ class Parking_Garage():
             # Need an else statement that will start this loop from beginning if payment does not equal 10.00
                 
                 
-    
-
     def leave_garage(self):
         pass
 
