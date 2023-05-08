@@ -1,9 +1,9 @@
 class Parking_Garage(): 
 
     def __init__(self, tickets, parkingSpaces, currentTicket):
-        self.tickets = tickets # list
+        self.tickets = tickets # list 
         self.parkingSpaces = parkingSpaces # list
-        self.currentTicket = {'Paid': False} # dictionary
+        self.currentTicket = {} # dictionary 
 
     def take_ticket(self):
         num_tickets = list(range(1,21))
@@ -34,7 +34,6 @@ class Parking_Garage():
                 this_ticket['Paid'] == True
                 self.currentTicket = this_ticket
                 break
-            # Need an else statement that will start this loop from beginning if payment does not equal 10.00
                 
                 
     def leave_garage(self):
@@ -51,14 +50,16 @@ class Parking_Garage():
         self.parkingSpaces.append(self.parkingSpaces[-1]+1)
 
     def runner(self):
-        call_Method = input('Are you entering or leaving the garage? ')
+        while True:
+            call_Method = input('Are you entering or leaving the garage? ')
 
-        if call_Method == 'entering':
-            self.take_ticket()
-        elif call_Method == 'leaving':
-            self.leave_garage()
-        else:
-            print('Your input was not recognized. Please enter "entering" or "leaving"')
+            if call_Method == 'entering':
+                self.take_ticket()
+            elif call_Method == 'leaving':
+                self.leave_garage()
+            else:
+                print('Your input was not recognized. Please enter "entering" or "leaving"')
+                
 
 
 num_tickets = []
