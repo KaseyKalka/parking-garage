@@ -32,10 +32,16 @@ class Parking_Garage():
         pass
 
     # If ticket has been paid, display 'Thank you, have a nice day'
+        if self.currentTicket['Paid']==True:
+            print('Thank you, have a nice day')
+        else:
+            payment = float(input("Please pay $10.00 for your parking ticket: "))
     # If ticket hasn't been paid, display an input prompt for payment
     # Once paid display, 'Thank you, have a nice day'
     # Update parkingSpaces list to increase by 1
+        self.tickets.append(self.tickets[-1]+1)
     # Update tickets list to increase by 1
+        self.parkingSpaces.append(self.parkingSpaces[-1]+1)
 
 
 num_tickets = []
