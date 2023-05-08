@@ -8,13 +8,17 @@ class Parking_Garage():
     def take_ticket(self):
         num_tickets = list(range(1,21))
         self.tickets = num_tickets
+        # Decrease the amount of tickets available by 1
         num_tickets = num_tickets[:-1]
         self.tickets = num_tickets
         print(f'There are {self.tickets[-1]} tickets left.')
 
-
-    # Decrease the amount of tickets available by 1
-    # Decrease the amount of parking spots available by 1
+        # Decrease the amount of parking spots available by 1
+        num_spots = list(range(1,21))
+        self.parkingSpaces = num_spots
+        num_spots = num_spots[:-1]
+        self.parkingSpaces = num_spots
+        print(f'There are {self.tickets[-1]} spots left.')
         
     def pay_for_parking(self):     
         # Displays an input that waits for  an amount from the user and store it in a variable
