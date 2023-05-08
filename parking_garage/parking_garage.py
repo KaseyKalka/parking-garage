@@ -50,8 +50,18 @@ class Parking_Garage():
     # Update tickets list to increase by 1
         self.parkingSpaces.append(self.parkingSpaces[-1]+1)
 
+    def runner(self):
+        call_Method = input('Are you entering or leaving the garage? ')
+
+        if call_Method == 'entering':
+            self.take_ticket()
+        elif call_Method == 'leaving':
+            self.leave_garage()
+        else:
+            print('Your input was not recognized. Please enter "entering" or "leaving"')
+
 
 num_tickets = []
 num_spots = []
 var = Parking_Garage(num_tickets, num_spots, False)
-var.take_ticket()
+var.runner()
